@@ -23,6 +23,7 @@ public class FieldConstants {
 
     //BigInteger
     public static final String BIGINT = "BIGINT";
+    public static final String BIGINT_UNSIGNED = "BIGINT UNSIGNED";
 
     //boolean
     public static final String BIT = "BIT";

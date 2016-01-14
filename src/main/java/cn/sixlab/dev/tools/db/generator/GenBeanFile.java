@@ -65,6 +65,7 @@ public abstract class GenBeanFile {
                     appendGetterSetter(fileContent, "int", name);
                     break;
                 case FieldConstants.BIGINT:
+                case FieldConstants.BIGINT_UNSIGNED:
                     appendGetterSetter(fileContent, "BigInteger", name);
                     break;
                 case FieldConstants.BIT:
@@ -125,6 +126,7 @@ public abstract class GenBeanFile {
                     fileContent.append("    private int " + StrUtil.getCamel(name) + ";\n");
                     break;
                 case FieldConstants.BIGINT:
+                case FieldConstants.BIGINT_UNSIGNED:
                     fileContent.append("    private BigInteger " + StrUtil.getCamel(name) + ";\n");
                     break;
                 case FieldConstants.BIT:
@@ -165,6 +167,8 @@ public abstract class GenBeanFile {
                 case FieldConstants.SET:
                     fileContent.append("    private String " + StrUtil.getCamel(name) + ";\n");
                     break;
+                default:
+                    System.out.println(type);
             }
         }
     }

@@ -78,8 +78,10 @@ public class BeanGen {
             TableColumn column = new TableColumn();
             column.setColumnTypeName(columnMeta.getColumnTypeName(i));
             column.setColumnType(columnMeta.getColumnType(i));
-
             column.setColumnName(columnMeta.getColumnName(i));
+            if(i==1){
+                column.setKey(true);
+            }
             columnList.add(column);
         }
         conn.close();
