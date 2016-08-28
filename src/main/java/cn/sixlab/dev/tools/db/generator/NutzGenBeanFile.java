@@ -20,8 +20,9 @@ public class NutzGenBeanFile extends GenBeanFile {
 
         fileContent.append("import org.nutz.dao.entity.annotation.Table;\n");
         fileContent.append("import org.nutz.dao.entity.annotation.Id;\n");
-        fileContent.append("import org.nutz.dao.entity.annotation.Column;\n\n");
+        fileContent.append("import org.nutz.dao.entity.annotation.Column;\n");
 
+        fileContent.append("\n");
         fileContent.append("@Table(\"" + tableName + "\")\n");
     }
 

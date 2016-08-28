@@ -32,6 +32,12 @@ public abstract class GenBeanFile {
         String className = StrUtil.getCamel(tableName, false);
         fileContent.append("package " + packageName + ";\n\n");
 
+        fileContent.append("import java.util.Date;\n");
+        fileContent.append("import java.math.BigInteger;\n");
+        fileContent.append("import java.math.BigDecimal;\n");
+        fileContent.append("import java.util.Date;\n");
+        fileContent.append("import java.util.Date;\n");
+
         addFileHeader(fileContent, tableName);
         fileContent.append("public class " + className + " {\n\n");
 

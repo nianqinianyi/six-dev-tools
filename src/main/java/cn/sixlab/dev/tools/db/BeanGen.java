@@ -29,17 +29,24 @@ import java.util.List;
  */
 public class BeanGen {
 
+    //private static String url = "jdbc:sqlite:sixtools.db";
+    //private static String driver = "org.sqlite.JDBC";
+    //private static String username = "";
+    //private static String password = "";
+
     private static String url = "jdbc:mysql://localhost:3306/blog?useUnicode=true&amp;characterEncoding=UTF-8";
     private static String driver = "com.mysql.jdbc.Driver";
     private static String username = "root";
     private static String password = "root";
+
     private static String[] tables = null;
 
     public static void main(String[] args) throws ClassNotFoundException, SQLException {
 
-        tables = new String[]{"sixlab_time_line"};
+        tables = new String[]{"tools_record_item","tools_record_val"};
         String type = "ormlite";
-        String packageName = "cn.sixlab.web.common.ormlite.bean";
+        //String type = "nutz";
+        String packageName = "cn.sixlab.sixtools.dao.bean.mysql";
 
         try {
             for (String tableName : tables) {

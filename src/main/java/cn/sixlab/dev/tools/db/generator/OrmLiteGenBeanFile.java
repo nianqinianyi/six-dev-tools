@@ -19,8 +19,9 @@ public class OrmLiteGenBeanFile extends GenBeanFile {
     protected void addFileHeader(StringBuffer fileContent, String tableName) {
 
         fileContent.append("import com.j256.ormlite.field.DatabaseField;\n");
-        fileContent.append("import com.j256.ormlite.table.DatabaseTable;\n\n");
+        fileContent.append("import com.j256.ormlite.table.DatabaseTable;\n");
 
+        fileContent.append("\n");
         fileContent.append("@DatabaseTable(tableName=\"" + tableName + "\")\n");
     }
 
